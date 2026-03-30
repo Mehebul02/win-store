@@ -27,6 +27,30 @@
 }
 
 
+/* slider  */
+.swiper-pagination {
+          bottom: 16px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+        }
+        .swiper-pagination-bullet {
+          background: #AA9393 !important;
+         width: 28px !important;
+          height: 10px !important;
+          opacity: 1 !important;
+          border-radius: 9999px !important;
+          transition: all 0.3s ease !important;
+          margin: 0 !important;
+        }
+        .swiper-pagination-bullet-active {
+          background: #0E3B3E !important;
+          width: 28px !important;
+          height: 10px !important;
+          border-radius: 6px !important;
+        }
+
 body {
   background: var(--background);
   color: var(--foreground);
