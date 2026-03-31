@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-
+import Container from "../shared/Container";
 const categories = [
   {
     title: "Electronics",
@@ -39,19 +39,20 @@ const categories = [
   
 ];
 
-export default function CategorySlider() {
+const Category = () => {
   return (
-   <div className="relative w-full px-10 py-6 bg-gradient-to-b from-[#F3EDC9] to-white/0">
-      <div className="custom-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer ">
+      <div className="relative w-full px-10 py-6 bg-gradient-to-b from-[#F3EDC9] to-white/0">
+     <Container>
+       <div className="custom-prev absolute left-1 top-1/2 -translate-y-1/2 z-10 cursor-pointer p-4 ">
         <SlArrowLeft className="text-[#1b1a1a] text-4xl font-normal"/>
       </div>
-      <div className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer ">
+      <div className="custom-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer px-4">
          <SlArrowRight className="text-[#1b1a1a] text-4xl font-normal"/>
       </div>
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={20}
-        slidesPerView={4}
+        slidesPerView={5}
         slidesPerGroup={2}
         loop={true}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
@@ -67,7 +68,7 @@ export default function CategorySlider() {
       >
         {categories.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="relative group overflow-hidden rounded-md shadow-sm">
+            <div className="relative group  rounded-md shadow-sm">
               
               <Image
                 src={item.image}
@@ -77,7 +78,7 @@ export default function CategorySlider() {
                 className="w-full h-[180px] object-cover"
               />
 
-              <div className="absolute bottom-3 left-3 right-3 bg-white/90 flex items-center justify-between px-3 py-2 shadow">
+              <div className="absolute bottom-3 -left-2 right-3 bg-white/95 flex items-center justify-between px-3 py-2 shadow">
                 <span className="text-sm font-medium text-black">
                   {item.title}
                 </span>
@@ -90,10 +91,9 @@ export default function CategorySlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+     </Container>
     </div>
   );
-}
+};
 
-
-
-
+export default Category;

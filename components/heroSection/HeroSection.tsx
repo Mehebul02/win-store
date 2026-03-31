@@ -5,7 +5,6 @@ import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import { ChevronRight } from 'lucide-react';
 import { bg_banner } from '@/assets';
 interface Product {
   id: number;
@@ -45,7 +44,7 @@ const HeroSection = () => {
       discount: '50% Off',
       buttonText: 'View More',
     },
-  
+
   ];
 
   return (
@@ -58,14 +57,13 @@ const HeroSection = () => {
         loop
         className="h-full w-full "
       >
-      
-          {products.map((product) => (
+
+        {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div
               className="h-full w-full  flex flex-col lg:flex-row items-center justify-between px-10 md:px-16 lg:px-20 lg:bg-cover bg-bottom lg:bg-center relative "
-              style={{ backgroundImage: `url(${product.image.src })` }}
+              style={{ backgroundImage: `url(${product.image.src})` }}
             >
-              {/* Left Content */}
               <div className="w-full lg:w-1/2 z-10 text-center lg:text-left mt-10 lg:mt-0 lg:px-12 py-3">
                 <h1 className="text-3xl md:text-5xl font-normal text-gray-900 mb-4">
                   <span className="text-gray-800">{product.title.split(' ')[0]} </span>
@@ -78,9 +76,9 @@ const HeroSection = () => {
                   {product.description}
                 </p>
 
-                <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 md:px-8 py-3 rounded-md font-semibold flex items-center gap-2 transition-all duration-300 hover:shadow-lg">
+                <button className="bg-cyan-500 cursor-pointer hover:bg-cyan-600 text-white px-6 md:px-8 py-3 rounded-md font-medium flex items-center gap-2 transition-all duration-300 hover:shadow-lg">
                   {product.buttonText}
-                  <ChevronRight size={20} />
+
                 </button>
               </div>
 
@@ -94,7 +92,7 @@ const HeroSection = () => {
             </div>
           </SwiperSlide>
         ))}
-     
+
       </Swiper>
     </div>
   );
