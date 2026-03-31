@@ -1,5 +1,7 @@
 ## How to Run the Project
 
+Live Site: [win-store-liard.vercel.app](https://win-store-liard.vercel.app/)
+
 ### 1. Clone the repository
 git clone https://github.com/Mehebul02/win-store
 
