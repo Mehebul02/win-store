@@ -1,8 +1,20 @@
+interface Rating {
+  rate: number;
+  count: number;
+}
+
 export interface Product {
-  id: string;
-  name: string;
-  brand: string;
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
   image: string;
-  originalPrice: number;
-  discountedPrice: number;
+  rating: Rating;
+}
+
+interface ApiResponse {
+  success: boolean;
+  message: string;
+  data: Product[];
 }
