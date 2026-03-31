@@ -23,3 +23,11 @@ This project follows the Next.js App Router architecture, designed to be modular
 - components/ → Reusable UI components (Button, Container, Loader, etc.)
 - lib/api/ → API calls and data fetching logic
 - assets/ → Static files and images
+
+## Assumptions
+
+- Product data is fetched from an  API  
+- No authentication system is implemented  
+- No real payment integration (UI only)  
+- No global state management (Redux/Zustand)  
+- Focus is on UI, performance, and clean architecture
