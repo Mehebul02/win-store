@@ -21,6 +21,5 @@ This project follows the Next.js App Router architecture, designed to be modular
 
 - app/ → Handles routing (Home, Product Details)
 - components/ → Reusable UI components (Button, Container, Loader, etc.)
-- ui/ → shadcn/ui components
 - lib/api/ → API calls and data fetching logic
 - assets/ → Static files and images
