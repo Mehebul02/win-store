@@ -2,7 +2,7 @@
 git clone https://github.com/Mehebul02/win-store
 
 # 2. Navigate into the project directory
-cd kicks
+cd win-store
 
 # 3. Install dependencies
 npm install
