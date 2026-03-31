@@ -9,7 +9,7 @@ const FooterLinks = ({ title, links }: FooterLinksProps) => {
     <div>
       <h3 className="text-[20px] text-[#00CAD7] font-medium mb-4">{title}</h3>
 
-      <ul className="space-y-2">
+      <ul className="space-y-2 ">
         {links.map((link) => (
           <li key={link}>
             <Link

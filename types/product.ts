@@ -13,8 +13,3 @@ export interface Product {
   rating: Rating;
 }
 
-interface ApiResponse {
-  success: boolean;
-  message: string;
-  data: Product[];
-}

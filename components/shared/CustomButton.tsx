@@ -8,7 +8,7 @@ const CustomButton = ({ text,  }: CustomButtonProps) => {
     return (
         
         <div className='w-full'>
-            <button className="cursor-pointer w-full bg-cyan-600 text-white text-[12px] py-2 rounded-sm hover:bg-cyan-700 transition">
+            <button className="cursor-pointer py-[9px] w-full bg-cyan-600 text-white text-[12px] py-2 rounded-sm hover:bg-cyan-700 transition">
                 {text}
             </button>
 

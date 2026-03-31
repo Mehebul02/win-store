@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" bg-[#161616] border-t border-gray-700 py-4">
-        <h1 className="max-w-6xl mx-auto text-sm text-gray-400">
+        <h1 className="max-w-6xl mx-auto text-sm text-gray-400 text-center lg:text-start">
           © 2024 Winstore. All Rights Reserved.
         </h1>
       </div>

@@ -1,6 +1,7 @@
 import CustomButton from "@/components/shared/CustomButton";
 import { Product } from "@/types/product";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductCardProps {
     product: Product;
@@ -8,6 +9,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
     return (
+        <Link href={`/products/${product.id}`} >
         <div className="group bg-white border border-gray-200 rounded-md p-3 flex flex-col items-center 
                hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
             <p className="text-[12px] text-[#000000] mb-1 capitalize">
@@ -22,10 +24,8 @@ const ProductCard = ({ product }: ProductCardProps) => {
                     alt={product?.title}
                     width={140}
                     height={110}
-                    loading="lazy"
-                    placeholder="blur"
-                      blurDataURL="/placeholder.png" 
-                    className="object-contain h-full transition-transform duration-300 group-hover:scale-105"
+                     priority
+                    className=" h-full transition-transform duration-300 group-hover:scale-105"
                 />
             </div>
             <div className="flex items-center gap-2 mb-3">
@@ -39,6 +39,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <CustomButton text="Add to Cart" href="#" />
 
         </div>
+        </Link>
     );
 };
 

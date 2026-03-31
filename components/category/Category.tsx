@@ -8,7 +8,6 @@ import Image from "next/image";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import Container from "../shared/Container";
 import { appliances, babies, electronics, fashion } from "@/assets";
-
 interface CategoryProps {
   categories: {
     id: number;
@@ -71,7 +70,6 @@ const Category = ({ categories }: CategoryProps) => {
             </SwiperSlide>
           ))}
         </Swiper>
-
         <div className="border-2 mt-2"></div>
       </Container>
     </div>

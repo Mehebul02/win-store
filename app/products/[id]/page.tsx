@@ -1,11 +1,14 @@
-import React from 'react';
+import ProductDetailsPage from "@/components/products/ProductDetails";
+import ProductDetailsSkeleton from "@/components/shared/ProductDetailsSkeleton";
+import { Suspense } from "react";
 
-const page = () => {
-    return (
-        <div>
-            <h1>Home</h1>
-        </div>
-    );
+const Page =async ({ params }: { params: { id: string } }) => {
+    const { id } = await params;
+  return (
+    <Suspense fallback={<ProductDetailsSkeleton />}>
+      <ProductDetailsPage id={id} />
+    </Suspense>
+  );
 };
 
-export default page;
+export default Page;
