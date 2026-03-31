@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## How to Run the Project
 
 Live Site: [win-store-liard.vercel.app](https://win-store-liard.vercel.app/)
@@ -33,3 +34,5 @@ This project follows the Next.js App Router architecture, designed to be modular
 - No real payment integration (UI only)  
 - No global state management (Redux/Zustand)  
 - Focus is on UI, performance, and clean architecture
+=======
+>>>>>>> a233fee (Completed the api fatch)
