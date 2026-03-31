@@ -1,7 +1,7 @@
-
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
-import { socialLinks, navLinks } from './data'
+import {  navLinks } from './data'
+import SocialLinks from '../shared/SocialLinks'
 
 const SecondaryNav = () => {
   return (
@@ -22,22 +22,9 @@ const SecondaryNav = () => {
             {link.name}
           </Link>
         ))}
+        <SocialLinks />
 
-        <div className="ml-auto flex items-center gap-3 flex-shrink-0">
-          {socialLinks.map(social => {
-            const Icon = social.icon
-            return (
-              <Link
-                key={social.label}
-                href={social.href}
-                className="text-white hover:text-white transition-colors"
-                aria-label={social.label}
-              >
-                <Icon size={17} />
-              </Link>
-            )
-          })}
-        </div>
+
       </div>
     </nav>
   )

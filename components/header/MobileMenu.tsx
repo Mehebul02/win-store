@@ -1,9 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import { Phone, User, Heart } from 'lucide-react'
-import { socialLinks, navLinks } from './data'
+import { User, Heart } from 'lucide-react'
+import { navLinks } from './data'
 import Image from 'next/image'
 import { cart } from '@/assets'
+import SocialLinks from '../shared/SocialLinks'
 
 interface MobileMenuProps {
   setMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -14,7 +15,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ setMobileMenuOpen }) => {
     <div className="md:hidden bg-teal-900 px-4 py-4 flex flex-col gap-1">
 
       <div className="flex items-center gap-2 text-white py-2 border-b border-teal-700 mb-1">
-         <Image src={cart} alt="Cart" width={20} height={20} />
+        <Image src={cart} alt="Cart" width={20} height={20} />
         <span className="text-sm font-semibold">+011 5827918</span>
         <button className="ml-auto text-gray-300 text-sm hover:text-white">Sign In</button>
       </div>
@@ -39,21 +40,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ setMobileMenuOpen }) => {
         </button>
       </div>
 
-      <div className="flex items-center gap-4 pt-3">
-        {socialLinks.map(social => {
-          const Icon = social.icon
-          return (
-            <Link
-              key={social.label}
-              href={social.href}
-              className="text-gray-300 hover:text-white transition-colors"
-              aria-label={social.label}
-            >
-              <Icon size={17} />
-            </Link>
-          )
-        })}
-      </div>
+      <SocialLinks />
     </div>
   )
 }

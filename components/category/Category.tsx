@@ -41,8 +41,8 @@ const categories = [
 
 const Category = () => {
   return (
-      <div className="relative w-full px-10 py-6 bg-gradient-to-b from-[#F3EDC9] to-white/0">
-     <Container>
+      <div className="relative w-full px-10 py-6 bg-gradient-to-b from-[#F3EDC9] to-white/0 ">
+     <Container >
        <div className="custom-prev absolute left-1 top-1/2 -translate-y-1/2 z-10 cursor-pointer p-4 ">
         <SlArrowLeft className="text-[#1b1a1a] text-4xl font-normal"/>
       </div>
@@ -91,6 +91,7 @@ const Category = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="border-2 mt-2"></div>
      </Container>
     </div>
   );
