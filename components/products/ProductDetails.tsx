@@ -18,6 +18,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getSingleProduct } from "@/lib/api/product";
 import { StarIcon } from "lucide-react";
+import Container from "../shared/Container";
 interface Props {
     params: Promise<{ id: string }>;
 }
@@ -29,7 +30,7 @@ const ProductDetailsPage = async ({ id }: { id: string }) => {
     if (!product) return notFound();
     return (
 
-        <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-12">
+        <Container className=" py-12 px-4 md:px-8 lg:px-12 min-h-screen ">
             <div className="flex flex-col lg:flex-row gap-8">
                 <div className="w-full lg:w-1/2 flex justify-center items-center">
                     <Image
@@ -66,7 +67,7 @@ const ProductDetailsPage = async ({ id }: { id: string }) => {
                     </button>
                 </div>
             </div>
-        </div>
+        </Container>
 
     );
 };
